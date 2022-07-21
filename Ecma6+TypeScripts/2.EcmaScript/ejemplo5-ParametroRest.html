@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Metodo rest->
+
+        Una forma de definir los argumentos que estamos indicando,al metodo 
+        en concreto donse se le puedan pasar multiples variables.
+        Advertencia, no confundir con Spread
+    -->
+
+    <script>
+        function mostraElementos(...muestra) {
+            console.log(muestra);
+            console.log(muestra[0]);
+        }
+        mostraElementos(2,3,5);
+        mostraElementos(3);
+
+//Esencia propia del rest
+        function sumar(...numeros) {
+            //Partimos de la idea que se comportan como Array
+            let suma =0;
+            for (let num of numeros){
+                    suma+=num;
+            }
+            return suma;
+        }
+console.log("sumar(5,7)->"+ sumar(5,7));
+console.log("sumar(5,8,3)->"+ sumar(5,8,3));
+console.log("sumar(1,2,3,5,6,7,8,9)->"+ sumar(1,2,3,5,6,7,8,9));
+
+        function multiplicacion(n1,n2,...n3) {
+            let resultado =n1*n2;
+            for(let cuenco of n3 ){
+                resultado*=cuenco
+            }
+            
+            console.log(resultado)
+            return resultado; 
+        }
+     console.log("multiplicar(4,1,9)->"+ multiplicacion(4,1,9));
+    </script>
+</body>
+</html>
