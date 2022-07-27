@@ -1,0 +1,85 @@
+<!--
+
+<<<<<<<<<<<<<<<<< ANGULAR >>>>>>>>>>>>>>>>>>>>>
+
+* Basicamente es un FrameWork de JavaScript, que nos permite crear las
+famosas Singles Page Application(SPA´s)
+Esto significa que con este tipo de FW, nunca va a desarrollar varias paginas
+ni a comunicarse entre otras paginas. Nos ofrece mayor eficacia y elegancia.
+
+*Las Herramientas de uso, necesario:
+
+    -> Navegador(Entorno Cliente)- Crome usaremos como sustentador de nuestro servidor
+    -> Editor de texto[codigo]- Visual Studio Code
+    -> Node.Js especificamente via NPM
+    -> angularCli, como set de herramientas para la consola que nos facilita las 
+    directivas en las que trabaja Angular
+
+    NUESTRA PLANTILLA
+-->
+
+<div class="fixed-top">
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h1 class="text-white h4 text-center">{{title}}!!</h1>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Angular [Inicio]</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">RouterLink</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Propiedades</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Caracteristicas
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Instalacion</a></li>
+                                    <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Ventajas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Successfully ✔</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</div>
+<app-logo></app-logo><br>
+<app-texto></app-texto>
+<!-- 
+<app-header></app-header>
+<app-navbar></app-nabar>
+<app-secction><app-secction>
+<app-footer><app-footer>
+
+-->

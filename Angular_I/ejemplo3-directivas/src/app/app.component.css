@@ -1,0 +1,34 @@
+h2,h1{
+
+    text-align: center;
+}
+
+hr{
+    margin: 0 auto;
+    width: 80%;
+    color: silver;
+    border-radius: 6px;
+    border: 4px solid;
+    box-shadow: 4px 4px 8px black;
+}
+.rojo{
+    color: white;
+    font-size: x-large;
+    font-weight: bold ;
+    background-color: red;
+
+}
+.verde{
+    color: white;
+    font-size: x-large;
+    font-weight: bold ;
+    background-color:green;
+
+}
+.naranja{
+    color: white;
+    font-size: x-large;
+    font-weight: bold ;
+    background-color:orange;
+
+}
