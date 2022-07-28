@@ -1,0 +1,83 @@
+<!-- 
+  
+  CONSTRUCCIONES: Data Binding en Angular
+
+  1º StringInterpolation    [var] TypeScript => Html{{}}
+    ⨀ Desarrolla o presenta una informacion(variable, array, json,..) y mostrarla
+    en Html, para la vista  del usuario (template)
+
+  2º Property Binding  []TypeScript <=  Html
+  ⨀ Informacion del lado de HTML , partiendo de una accion del usuario, que previamente
+  hayamos definido o establecido, un valor (por defecto, por tiempo, ...etc.)
+
+  3º Event Binding   ()TypeScript <= HTML
+  ⨀ Otorga la escucha activa de los eventos  desde HTML
+  
+
+  4º Two way Data Binding [()] TypeScript <=>  HTML
+  ⨀ Se establece una comunicacion integral en dos vias. Cliente(html) a TypeScript y 
+  viceversa, en definitiva será la  visualiacion del template con modificaciones 
+  a tiempo real de html a Type y de Type a html 
+-->
+<div class="container">
+  <h2>---Ejemplos Binding----</h2><br>
+  <hr>
+  <h3>1º StringInterpolation</h3>
+  <div>
+    {{title}} <br>
+    {{nombre + " apodo"}} <br>
+    {{3+7-2}} <br>
+  </div>
+  <hr><br>
+  <h3>2º Property Binding</h3>
+  <button class="btn btn-warning" [disabled]="habilitado">Dale Yá</button>
+  <hr><br>
+  <h3>3º Event Binding</h3>
+  <button class="btn btn-secondary" (click)="saludar()">SALUDAR</button>
+  <hr><br>
+  <h3>4º Two Way Data Binding</h3>
+  <label>Anotaciones:</label>
+  <input type="text" placeholder="escribe  aqui" [(ngModel)]="nombre">
+  <p>
+    Escribe:&nbsp; Tu nombre: {{nombre}}&nbsp;tus Apellidos {{apellidos}}&nbsp;
+    y tu e-mail:{{email}}
+  </p>
+  <!-- 
+  [(ngModel)]
+Una directiva que nos ofrece la posibilidad de sincronización de los DATOS, ESTRUCTURA,...del
+HTML asi como de su 'modelo'(a la referencia defina en ts).
+Tal directiva guarda el valor que tenga la propiedad y actualiza la  misma siemmpre y cuando haya una interaccion
+por parte del usuario
+-->
+  <div class="mb-3 row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">{{email}}</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control-plaintext" [(ngModel)]="email" value=''>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Nombre</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="nombre">
+    </div>
+  </div>
+  <hr><br>
+  <h3>Ejercicio de asentamientos de conceptos</h3>
+  <label> Resuelve:</label>
+  <ol>
+    <li>
+      Crear seccion div que al estar el raton encima(event) muestre un color verde y al salir rojo
+      mouseover y el mouseout
+    </li>
+    <li>
+      Que nos diga en texto que color tiene el div, o rojo o verde, interpolationString
+
+    </li>
+    <li>
+      Recuerda aplicar estilos declarados en css, lo haremos desde la directiva [Class]=''
+    </li>
+  </ol>
+  <div (mouseover)="this.estilo='verde'" (mouseout)="this.estilo='rojo'" [class]="estilo">
+    El color será: {{estilo}}
+  </div>
+</div>
