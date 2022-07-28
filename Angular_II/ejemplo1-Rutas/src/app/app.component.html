@@ -1,0 +1,63 @@
+<!-- 
+  =============
+  LA NAVEGACION
+  =============
+
+Establecidas las configuraciones necearias que requiere Angular para la navegacion
+el atributo o directiva routerLink, que nos provee Angular para la conexion entre templates
+Proporcionando así reducciones en los tiemmpos de recarga y aprovechamiento eficiente de  las
+capacidades de tiempo de estos FrameWork. VS href="", enlace tradicional con redireccion a otra
+pagina(sea cual sea) esas recargas relentizan la ejecucion.
+
+
+
+-->
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink='inicio'>RUTAS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink='c1'>COMPONENTE 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='c2'>COMPONENTE 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='c3'>COMPONENTE 3</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+
+        <div class="gcse-search"></div>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- 
+  <router-outlet></router-outlet> 
+Etiqueta exclusiva que nos ofrece Angular, proporcionando la conexion y volcado
+de los templates asociados al routerLink. Es decir, por defecto todos los componentes serán
+mostrados así como sus hijos del componente AppComponent.
+Con lo cual al incluir dicha etiqueta dentro de la vista(template) el  AppComponent, se
+renderizará o indexará cada uno de dichos componentes del routing dependiendo de la pagina
+en la que nos encontramos.
+routerLink, su funcion será la de mantener el  index.html y   a traves  de  la  etiqueta quita
+y pone el componente al que se apunta; Mostrado su template
+-->
+<!--
+  Sintaxis general que encontrariammos  en un app.component.html:
+  <app-header></header> 
+  <app-navbar></app-navar> 
+    <app-inicio></app-inicio> 
+  <app-secction></app-secction> 
+  <router-outlet></router-outlet> 
+  <app-footer></app-footer> 
+  -->
+<router-outlet></router-outlet>
