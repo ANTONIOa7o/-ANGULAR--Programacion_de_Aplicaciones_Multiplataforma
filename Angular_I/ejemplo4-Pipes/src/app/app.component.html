@@ -1,0 +1,73 @@
+<h2>Ejemplos PIPES en:{{title}}</h2>
+
+<!--
+=====================
+        PIPES
+=====================
+
+Elementos que usamos en el  HTML,con la finalidad de modificar salidas predeterminadas
+del DOM, En definitiva al igual que las directivas van a tomar un elemento de entrada y
+le dará cierto formato dando una salida diferente.
+
+Angular trae por defecto diversos Pipes, para configuraciones y cambios comunes; Generalmente
+cambiar formatos, formatear fechas,..etc. 
+
+
+Pueden tomar parametros que le indiquemos de forma precisa. Es  posible tambien encadenar
+estos mismos hasta obtener resultados concretos o deseados.
+      
+      -->
+<h3>Pipes Texto</h3>
+
+
+<ul>
+        <li>Sin formato: {{texto}}</li>
+        <li>En minisculas {{texto | lowercase}}</li>
+        <li>En Mayuscular {{texto | uppercase}}</li>
+        <li>Titulo por defecto {{texto | titlecase}}</li>
+</ul>
+<hr><br>
+<h3>Pipes de Numeros</h3>
+<ol>
+        <li>Sin formato: {{numero}}</li>
+        <li>4 decimales {{numero | number:'.4'}}</li>
+        <li>10 digitos y 6 decimales {{numero | number:'10.6'}}</li>
+</ol>
+<hr><br>
+<h3>Pipes Porcentajes</h3>
+
+<ul>
+        <li>Sin formato {{porcentaje}}</li>
+        <li>Porcentaje {{porcentaje | percent}}</li>
+        <li> Porcentajes con 1 decimal {{porcentaje | percent:'.1'}}</li>
+        <li>Porcentaje 3 digitos y 2 decimales {{porcentaje | percent:'3.2'}}</li>
+</ul>
+<hr><br>
+<h3>Pipes Monedas</h3>
+<ol>
+        <li>Sin formato: {{numero}}</li>
+        <li>Con formato {{numero | currency}}</li>
+        <li>Con formato en Euros {{numero | currency:'EUR':'code'}}</li>
+        <li>Formato con simbolo {{numero | currency:'EUR':'symbol'}}</li>
+        <li>Formato con 6 digitos y 4 decimales {{numero | currency:'EUR':'symbol':'6.4'}}</li>
+</ol>
+<hr><br>
+<h3>Pipes Fecha</h3>
+<ul>
+        <li>Sin formato {{fecha}}</li>
+        <li>Formato Corto {{fecha  | date:'short'}}</li>
+        <li>Formato Entero {{fecha | date:'full'}}</li>
+        <li>fecha principal   {{fecha | date:'shortDate'}}</li>
+        <li>hora {{fecha | date:'shortTime'}}</li>
+        <li>Personalizada   {{fecha | date: 'dd/MM/yyyy-------------HH:mm:ss'}}</li>
+</ul>
+<hr><br>
+
+<h3>Pipe Json</h3>
+<ol>
+        <li>Sin formato {{jsonObjeto}}</li>
+        <li>con formate json {{jsonObjeto | json}}</li>
+        <li>Con formato accediendo a un elemento: {{jsonObjeto.nombre}}</li>
+     <li><pre>Formato Original de BBDD {{jsonObjeto | json}}</pre>  </li>
+</ol>
+
